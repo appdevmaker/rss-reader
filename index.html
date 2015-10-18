@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>RSS READER by Angular.js</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="directive/rss-reader/style.css">
+</head>
+<body ng-controller="myCtrl" ng-cloak>
+
+<rss-reader options="{{rssOptions}}"></rss-reader>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+
+<!-- App files -->
+<script src="module/module.js"></script>
+<script src="directive/rss-reader/rss-reader.js"></script>
+<script src="ctrl/myCtrl.js"></script>
+
+</body>
+</html>

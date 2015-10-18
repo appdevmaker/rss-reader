@@ -1,0 +1,41 @@
+<div class="panel panel-default" id="rss-reader-panel" ng-style="WidgetProps">
+    <div class="panel-heading" style="top:0;position: static;">
+        <h3 class="panel-title">{{options.Title}}</h3>
+    </div>
+    <div class="panel-body">
+        <form>
+        <div class="input-prepend col-md-12" ng-show="feeds.length > 0">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12" ng-show="options.DisplaySearchField">
+                    <input type="text" class="search-query form-control" placeholder="Enter item info..." ng-model="filterText" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                <div class="panel panel-success" ng-show="options.GroupsList.length > 0">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Custom groups</h3>
+                    </div>
+                    <div class="rss-groups-labels">
+                        <span class="label label-primary" ng-repeat="group in options.GroupsList" ng-click="updateRssItems(group)">
+                            {{ group }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class="clearfix"></div>
+        <div ng-style="RssItemsStyle">
+            <ul class="unstyled">
+                <li ng-repeat="feed in feeds | filter:filterText | limitTo:options.Max">
+                    <i class="glyphicon glyphicon-share-alt rss-title-icon"></i><a target="{{IsBlank}}" href="{{feed.link}}">{{feed.title}}</a>
+                    <p class="text-left">{{feed.contentSnippet}}</p>
+                    <span class="small">{{feed.publishedDate}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
