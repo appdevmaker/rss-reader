@@ -1,6 +1,9 @@
 # rss-reader
 Custom Angular.js directive to read rss feeds.
 
+<p><b>Demo:</b></p>
+<a href="http://somexamples.16mb.com/angular/rss-reader/index.html" target="_blank"><b>VIEW</b></a> - click for details.
+
 <p>I decided to develop a simple version widget to read rss feeds. It may be useful when you often read several urls but you haven't a lot of time to do that.</p>
 To solve that typical problem, you can use special web-widget, which could be integrated into real web-project or operates just as separeted component.
 
